@@ -1,4 +1,4 @@
-# Dance-doctor: Dance in the right pose!
+# Dance-doctor: Synchronize Your Moves with Precision!
 
 ![dance_with_low](https://github.com/bgb10/dance-with/assets/25452313/6eb9c97d-439d-4f2f-b757-a1394775b690)
 
@@ -24,12 +24,14 @@ Table of Contents
 
 ## Motivation
 
-People have become more interested in dancing due to the large number of dancing videos on Instagram. People often take videos of themselves dancing with their friends, but people who are not good dancers are not sure how much their posture is wrong. Dance-with analyzes the posture of the people in the video and shows them which body part are not same between other people, so allows you to dance in sync with each other.
+People have become more interested in dancing due to the large number of dancing videos on Instagram. People often take videos of themselves dancing with their friends, but people who are not good dancers are not sure how much their posture is wrong. Dance-doctor analyzes the posture of the people in the video and shows them which body part are not same between other people, so allows you to dance in sync with each other.From choreographers ensuring flawless group performances to individuals improving their form, Dance-Doctor empowers anyone to perfect their moves with AI.
 
 ## Features
 
 - Alerts which body parts have inconsistencies between people in your video
 - Displays estimated poses in the the resulting frame
+- Real-time pose estimation and skeleton visualization for individual and group performances.
+- Alerts dancers about mismatched body parts with visual feedback directly on video frames.
 
 > Due to time constraints, each body part was replaced with a **number(0-16)**
 
@@ -152,6 +154,7 @@ python3 ./dance_with.py \
   -r
   -ath 0.2
 ```
+users should specify the input type (video file or live webcam) using -i.
 
 ## Implementation
 ### OpenPose
@@ -184,6 +187,7 @@ The demo reports
   * **Postrocessing** — preparation inference result for output.
   * **Rendering** — generating output image.
 * Reports mismatched body part positions in upper right corner
+* mismatched body parts are not shown yet but are marked by placeholder numbers (0–16). 
 
 <img width="232" alt="image" src="https://github.com/bgb10/dance-with/assets/25452313/25368045-2250-47ee-947c-9abf9f924861">
 
